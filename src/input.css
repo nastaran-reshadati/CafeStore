@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Dana";
+    src: url("../fonts/Dana/woff2/DanaFaNum-DemiBold.woff2");
+  }
+  @font-face {
+    font-family: "Dana-Medium";
+    src: url("../fonts/Dana/woff2/DanaFaNum-Regular.woff2");
+  }
+  @font-face {
+    font-family: "Dana-DemiBold";
+    src: url("../fonts/Dana/woff2/DanaFaNum-Regular.woff2");
+  }
+  @font-face {
+    font-family: "Morabba";
+    src: url("../fonts/Morabba/woff2/Morabba-Light.woff2");
+  }
+  @font-face {
+    font-family: "Morraba-Medium";
+    src: url("../fonts/Morabba/woff2/Morabba-Medium.woff2");
+  }
+  @font-face {
+    font-family: "Morabba-Bold";
+    src: url("../fonts/Morabba/woff2/Morabba-Bold.woff2");
+  }
+
+  body {
+    background-image: url("../images/headerBgDesktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

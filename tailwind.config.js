@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./public/**/*.{html,js}"],
-
+  darkMode: "class",
   theme: {
+    fontFamily: {
+      Dana: ["Dana", "sans-serif"],
+      DanaMedium: ["Dana-Medium", "sans-serif"],
+      DanaDemiBold: ["Dana-DemiBold", "sans-serif"],
+      Morabba: ["Morabba", "sans-serif"],
+      MorabbaMedium: ["Morraba-Medium", "sans-serif"],
+      MorabbaBold: ["Morabba-Bold", "sans-serif"],
+    },
     extend: {
       colors: {
         brown: {
@@ -18,13 +26,11 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
-      fontFamily: {
-        Dana: "Dana",
-        DanaMedium: "Dana Medium",
-        DanaDemibold: "Dana DemiBold",
-        Morabba: "Morabba Light",
-        MorabbaMedium: "Morabba Medium",
-        MorabbaBold: "Morabba Bold",
+      spacing: {
+        icon: "2.125rem",
+      },
+      letterSpacing: {
+        tightest: "-1.3px",
       },
     },
   },
