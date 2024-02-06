@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        "shadow-normal": "0 1 10px rgba(0, 0, 0, 0.5)",
+        normal: "0 1 10px rgba(0, 0, 0, 0.5)",
       },
       borderRadius: {
         "4xl": "2rem",
