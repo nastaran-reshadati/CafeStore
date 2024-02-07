@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" class="dark">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/app.css" rel="stylesheet" />
     <link rel="icon" href="./images/fav-icon.png" type="image/png" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+       document.documentElement.classList.add('dark')
+      } else {
+      document.documentElement.classList.remove('dark') 
+      }
+    </script>
     <title>Cafe Store</title>
-  </head>
+  </head> 
   <body class="bg-gray-100 dark:bg-zinc-800 font-Dana">
     <!-- All App Icons -->
     <svg class="hidden">
@@ -119,7 +126,7 @@
               </svg>
               <!-- Card Shopping Box -->
 
-              <div
+              <!-- <div
               class="absolute transition-all group-hover:opacity-100  top-full font-DanaMedium  w-52	h-[272px] p-6 space-y-4  border-t-[3px] text-base  rounded-2xl shadow-normal border-t-orange-300 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white  child:inline-block child:tracking-normal child:transition-colors child-hover:text-orange-300"
             >
               <a href="#">قهوه ویژه</a>
@@ -133,11 +140,17 @@
               <a href="#">کپسول قهوه</a>
 
               <a href="#">قهوه زینو برزیلی</a>
-          </div>
+          </div> -->
             </div>
-            <svg class="w-icon h-icon">
-              <use href="#moon"></use>
-            </svg>
+            <!-- Switch LIght & Dark -->
+            <div id="toggle-theme">
+              <svg class="inline-block dark:hidden w-icon h-icon cursor-pointer">
+                <use href="#moon"></use>
+              </svg>
+              <svg class="hidden dark:inline-block w-icon h-icon cursor-pointer">
+                <use href="#sun"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="w-px h-14 bg-white/20"></div>
@@ -154,6 +167,8 @@
         </div>
       </div>
     </header>
+
+    
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
-=
